@@ -38,7 +38,7 @@ prompt = PromptTemplate(template=prompt_template, input_variables=["text"])
 # Summarize Button
 if st.button("Summarize Now"):
     # Validate inputs (inputs validate karo)
-    if not groq_api_key:
+    if not api_key:
         st.error("API key not found! Please check your .env file.")
     elif not generic_url.strip():
         st.error("Please enter a URL to proceed.")
