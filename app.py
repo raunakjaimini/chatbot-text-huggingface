@@ -9,16 +9,16 @@ from langchain_community.document_loaders import YoutubeLoader, UnstructuredURLL
 
 # Load environment variables from .env file
 load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
+api_key = os.getenv("API_KEY")
 
 # Initialize the LLM model (yaha model initialize karo)
-llm = ChatGroq(model="Gemma-7b-It", groq_api_key=groq_api_key)
+llm = ChatGroq(model="Gemma-7b-It", groq_api_key=api_key)
 
 # Streamlit APP Configuration
 st.set_page_config(page_title="Chat-Mate", page_icon="🦜", layout="centered")
 
 # Page Title and Subtitle
-st.title("Chat-Mate...Summarize Text From YT or Website Using Huggingface📝")
+st.title("Chat-Mate..Summarize Text Using Huggingface📝")
 st.subheader('Summarize any URL with ease')
 
 # URL input and language selection
